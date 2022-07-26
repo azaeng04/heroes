@@ -77,20 +77,11 @@
       }
     },
     "test": {
-      "executor": "@angular-devkit/build-angular:karma",
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/app-heroes"],
       "options": {
-        "main": "apps/app-heroes/src/test.ts",
-        "polyfills": "apps/app-heroes/src/polyfills.ts",
-        "tsConfig": "apps/app-heroes/tsconfig.spec.json",
-        "karmaConfig": "apps/app-heroes/karma.conf.js",
-        "assets": [
-          "apps/app-heroes/src/favicon.ico",
-          "apps/app-heroes/src/assets"
-        ],
-        "styles": [
-          "apps/app-heroes/src/styles.css"
-        ],
-        "scripts": []
+        "jestConfig": "apps/app-heroes/jest.config.ts",
+        "passWithNoTests": true
       }
     }
   }
